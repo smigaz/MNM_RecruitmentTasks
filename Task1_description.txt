@@ -1,0 +1,5 @@
+I used following workflow:
+samtools index miniMNM00065.bam
+samtools view -b miniMNM00065.bam 1 > miniMNM00065.chr1.bam
+java -jar picard.jar SamToFastq I=miniMNM00065.chr1.bam FASTQ=file_1.fq SECOND_END_FASTQ=file_2.fq
+/home/asmigas/bwa-0.7.17/bwa mem ./Mapowanie/hg38.fa file_1.fq file_2.fq > Task1_mini.chr1.re-align.sam
